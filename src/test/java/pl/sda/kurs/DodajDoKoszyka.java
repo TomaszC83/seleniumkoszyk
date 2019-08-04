@@ -38,7 +38,11 @@ public class DodajDoKoszyka {
 
         produkty.get(3).findElement(By.cssSelector(".fop-btn-add")).click();
 
+        String iloscProduktu = produkty.get(3)
+                .findElement(By.cssSelector(".quantityInput__input")).getAttribute("value");
+        System.out.println(iloscProduktu);
 
+        assert (iloscProduktu.equals("1"));
 
     }
 
